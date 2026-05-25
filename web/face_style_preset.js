@@ -391,15 +391,36 @@ function renderLoraRows(node, rowsContainer) {
 function hideJsonWidget(node) {
     const w = node.widgets?.find((wd) => wd.name === "lora_stack_json");
     if (!w) return;
-    // "converted-widget" is the type ComfyUI uses when a widget has been
-    // converted to an input — the widget stays attached (so the value still
-    // serializes with the workflow) but is not drawn on the node.
+
+    // Make the widget invisible. Multiple fallbacks because different ComfyUI
+    // frontend versions render widgets differently:
+    //   - "converted-widget" type tells the canvas drawing loop to skip it
+    //   - hidden=true is a LiteGraph-level flag
+    //   - computeSize=[0,-4] collapses any reserved layout space
+    //   - draw=noop overrides the inline canvas draw fn if it still runs
+    //   - element/inputEl display:none hides any HTML elements
     w.type = "converted-widget";
+    w.hidden = true;
     w.computeSize = () => [0, -4];
     w.serializeValue = async () => w.value;
-    if (w.element) {
-        w.element.style.display = "none";
+
+    const originalDraw = w.draw;
+    w.draw = function () {
+        // intentional no-op so nothing renders even if the canvas tries
+    };
+    // Keep originalDraw reference so dev tools can inspect; not strictly used
+    w._originalDraw = originalDraw;
+
+    if (w.element) w.element.style.display = "none";
+    if (w.inputEl) w.inputEl.style.display = "none";
+    if (w.textarea) w.textarea.style.display = "none";
+
+    // Force a node-size recalc so the empty slot collapses immediately
+    if (typeof node.computeSize === "function") {
+        const newSize = node.computeSize();
+        node.size = [node.size[0], newSize[1]];
     }
+    node.setDirtyCanvas?.(true, true);
 }
 
 function attachLoraStackUI(node) {
