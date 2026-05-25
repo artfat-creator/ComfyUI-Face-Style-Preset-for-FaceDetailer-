@@ -391,8 +391,12 @@ function renderLoraRows(node, rowsContainer) {
 function hideJsonWidget(node) {
     const w = node.widgets?.find((wd) => wd.name === "lora_stack_json");
     if (!w) return;
+    // "converted-widget" is the type ComfyUI uses when a widget has been
+    // converted to an input — the widget stays attached (so the value still
+    // serializes with the workflow) but is not drawn on the node.
+    w.type = "converted-widget";
     w.computeSize = () => [0, -4];
-    w.type = "hidden_widget";
+    w.serializeValue = async () => w.value;
     if (w.element) {
         w.element.style.display = "none";
     }
