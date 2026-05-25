@@ -124,9 +124,13 @@ class FaceStylePreset:
                     "INT",
                     {"default": 20, "min": 0, "max": 64, "step": 1},
                 ),
-                "bbox_padding": (
+                "bbox_dilation": (
                     "INT",
                     {"default": 32, "min": 0, "max": 256, "step": 1},
+                ),
+                "bbox_crop_factor": (
+                    "FLOAT",
+                    {"default": 3.0, "min": 1.0, "max": 10.0, "step": 0.1},
                 ),
                 "positive_enabled": ("BOOLEAN", {"default": True}),
                 "positive_text": (
@@ -155,6 +159,7 @@ class FaceStylePreset:
         "FLOAT",
         "INT",
         "INT",
+        "FLOAT",
     )
     RETURN_NAMES = (
         "model",
@@ -163,7 +168,8 @@ class FaceStylePreset:
         "guide_size",
         "denoise",
         "feather",
-        "bbox_padding",
+        "bbox_dilation",
+        "bbox_crop_factor",
     )
     FUNCTION = "execute"
     CATEGORY = "Face Tools"
@@ -176,7 +182,8 @@ class FaceStylePreset:
         guide_size,
         denoise,
         feather,
-        bbox_padding,
+        bbox_dilation,
+        bbox_crop_factor,
         positive_enabled,
         positive_text,
         negative_enabled,
@@ -216,7 +223,8 @@ class FaceStylePreset:
             float(guide_size),
             float(denoise),
             int(feather),
-            int(bbox_padding),
+            int(bbox_dilation),
+            float(bbox_crop_factor),
         )
 
 

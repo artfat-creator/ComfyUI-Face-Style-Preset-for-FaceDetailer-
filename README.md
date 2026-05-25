@@ -14,7 +14,8 @@ setter that normally feeds FaceDetailer.
 - 🔌 **CLIP encoding built in** — outputs `CONDITIONING` directly, no separate
   `CLIPTextEncode` needed
 - 📐 **FaceDetailer-ready** — `guide_size`, `denoise`, `feather`,
-  `bbox_padding` outputs wire straight into Impact Pack's FaceDetailer
+  `bbox_dilation`, `bbox_crop_factor` outputs wire straight into Impact
+  Pack's FaceDetailer
 - ✏️ **Everything editable** — preset values are starting points, every
   widget remains independently adjustable
 - 💾 **Workflow-safe** — LoRA stack persists in saved workflows via a hidden
@@ -33,7 +34,8 @@ setter that normally feeds FaceDetailer.
 │ guide_size:    [448.0]                  │
 │ denoise:       [0.42]                   │
 │ feather:       [25]                     │
-│ bbox_padding:  [44]                     │
+│ bbox_dilation: [44]                     │
+│ bbox_crop_factor: [3.5]                 │
 │                                         │
 │ ☑ positive_enabled                      │
 │ ┌─────────────────────────────────────┐ │
@@ -54,7 +56,7 @@ setter that normally feeds FaceDetailer.
 │                                         │
 │ ● model      ● positive   ● negative    │
 │ ● guide_size ● denoise    ● feather     │
-│ ● bbox_padding                          │
+│ ● bbox_dilation  ● bbox_crop_factor     │
 └─────────────────────────────────────────┘
 ```
 
@@ -106,9 +108,10 @@ standard library.
      for SD1.5 / SDXL / Flux, **or** through `ModelSamplingAuraFlow` /
      `ModelSamplingSD3` first for Z-Image Turbo / AuraFlow / SD3
    - `positive` / `negative` → `KSampler` and/or `FaceDetailer` CONDITIONING inputs
-   - `guide_size` / `denoise` / `feather` / `bbox_padding` → matching
-     `FaceDetailer` parameters (right-click each widget on FaceDetailer →
-     **Convert widget to input** to enable the connection)
+   - `guide_size` / `denoise` / `feather` / `bbox_dilation` /
+     `bbox_crop_factor` → matching `FaceDetailer` parameters (right-click
+     each widget on FaceDetailer → **Convert widget to input** to enable
+     the connection)
 
 ---
 
@@ -178,7 +181,8 @@ Open `face_presets.json` next to the node and add an entry:
   "guide_size": 512,
   "denoise": 0.47,
   "feather": 20,
-  "bbox_padding": 32
+  "bbox_dilation": 32,
+  "bbox_crop_factor": 3.0
 }
 ```
 
@@ -195,7 +199,8 @@ Required fields per preset:
 - `guide_size` — number, 64 … 2048
 - `denoise` — number, 0.0 … 1.0
 - `feather` — integer, 0 … 64
-- `bbox_padding` — integer, 0 … 256
+- `bbox_dilation` — integer, 0 … 256
+- `bbox_crop_factor` — number, 1.0 … 10.0 (FaceDetailer default is 3.0)
 
 Optional (documentation only — not consumed by the node):
 
@@ -220,7 +225,8 @@ Optional (documentation only — not consumed by the node):
                         │   │   │    │     │
                         ▼   ▼   ▼    ▼     ▼
                       model pos neg  guide_size / denoise
-                                     feather / bbox_padding
+                                     feather / bbox_dilation /
+                                     bbox_crop_factor
 
   Typical downstream wiring:
 
@@ -232,7 +238,7 @@ Optional (documentation only — not consumed by the node):
     positive   ──► KSampler.positive   AND/OR   FaceDetailer.positive
     negative   ──► KSampler.negative   AND/OR   FaceDetailer.negative
 
-    guide_size, denoise, feather, bbox_padding
+    guide_size, denoise, feather, bbox_dilation, bbox_crop_factor
                ──► FaceDetailer (right-click each widget on FaceDetailer
                                  → "Convert widget to input")
 
@@ -310,6 +316,17 @@ MIT — see [LICENSE](LICENSE).
   Loader inspired the dynamic LoRA UI pattern
 
 ## Changelog
+
+### 2.1.0 — Match FaceDetailer parameter names
+- Renamed output `bbox_padding` → `bbox_dilation` (matches Impact Pack's
+  `FaceDetailer.bbox_dilation` parameter exactly)
+- Added new output `bbox_crop_factor` (FLOAT) → wires straight into
+  `FaceDetailer.bbox_crop_factor`. Controls how much area around the
+  detected face bbox is cropped for the detail pass.
+- Per-style defaults for `bbox_crop_factor`:
+  - Magazine / Fashion / Boudoir → 3.5 (more context for refined work)
+  - Smartphone variants / Vintage Film → 2.5 (tighter, candid)
+  - Noir / User_Manual / None → 3.0 (FaceDetailer default)
 
 ### 2.0.0 — All-in-one rework
 - One unified node replacing the previous two (`FaceStylePreset` +

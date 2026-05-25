@@ -23,7 +23,8 @@ const SAFE_DEFAULTS = {
     guide_size: 384.0,
     denoise: 0.40,
     feather: 20,
-    bbox_padding: 32,
+    bbox_dilation: 32,
+    bbox_crop_factor: 3.0,
 };
 
 let PRESETS = {};
@@ -95,7 +96,16 @@ function applyPreset(node, presetName) {
     setWidgetValue(node, "guide_size", data.guide_size ?? SAFE_DEFAULTS.guide_size);
     setWidgetValue(node, "denoise", data.denoise ?? SAFE_DEFAULTS.denoise);
     setWidgetValue(node, "feather", data.feather ?? SAFE_DEFAULTS.feather);
-    setWidgetValue(node, "bbox_padding", data.bbox_padding ?? SAFE_DEFAULTS.bbox_padding);
+    setWidgetValue(
+        node,
+        "bbox_dilation",
+        data.bbox_dilation ?? data.bbox_padding ?? SAFE_DEFAULTS.bbox_dilation
+    );
+    setWidgetValue(
+        node,
+        "bbox_crop_factor",
+        data.bbox_crop_factor ?? SAFE_DEFAULTS.bbox_crop_factor
+    );
 
     node.setDirtyCanvas(true, true);
 }
