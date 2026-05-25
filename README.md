@@ -25,40 +25,14 @@ setter that normally feeds FaceDetailer.
 
 ## Screenshot
 
-```
-┌─────────────────────────────────────────┐
-│ Face Style Preset                       │
-│ ● model        ● clip                   │
-│                                         │
-│ preset:        [F_Boudoir_Intimate ▼]   │
-│ guide_size:    [448.0]                  │
-│ denoise:       [0.42]                   │
-│ feather:       [25]                     │
-│ bbox_dilation: [44]                     │
-│ bbox_crop_factor: [3.5]                 │
-│                                         │
-│ ☑ positive_enabled                      │
-│ ┌─────────────────────────────────────┐ │
-│ │ intimate boudoir face portrait,     │ │
-│ │ soft warm window light on face, ... │ │
-│ └─────────────────────────────────────┘ │
-│                                         │
-│ ☑ negative_enabled                      │
-│ ┌─────────────────────────────────────┐ │
-│ │ harsh lighting, studio strobes, ... │ │
-│ └─────────────────────────────────────┘ │
-│                                         │
-│ ── LoRA Stack ──                        │
-│ ☑ [zoryana_lora.safe… ▼]  [0.90]  ✕    │
-│ ☑ [sda_adapter.safet… ▼]  [0.60]  ✕    │
-│ ☑ [fun_detail.safete… ▼]  [0.50]  ✕    │
-│           [ + Add LoRA ]                │
-│                                         │
-│ ● model      ● positive   ● negative    │
-│ ● guide_size ● denoise    ● feather     │
-│ ● bbox_dilation  ● bbox_crop_factor     │
-└─────────────────────────────────────────┘
-```
+![Face Style Preset node wired to ModelSamplingAuraFlow and FaceDetailer](images/node-overview.png)
+
+A typical Z-Image Turbo workflow: `Face Style Preset` feeds modified `model`
+through `ModelSamplingAuraFlow` into `FaceDetailer.model`, while its
+`positive` / `negative` CONDITIONING and `guide_size` / `denoise` / `feather`
+/ `bbox_dilation` / `bbox_crop_factor` numeric outputs wire straight into
+the matching FaceDetailer inputs. The LoRA stack shown uses `B4_Smartphone_OutdoorSunny`
+preset with a `Zoryana` character LoRA + a Z-Image Fun detail LoRA.
 
 ---
 
