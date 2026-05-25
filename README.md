@@ -102,10 +102,12 @@ standard library.
 5. Click **+ Add LoRA** to stack character / style / detail LoRAs. Type to
    filter the file list, set strength, toggle each on/off.
 6. Wire outputs:
-   - `model` → KSampler / ModelSampling / FaceDetailer
-   - `positive` / `negative` → FaceDetailer's CONDITIONING inputs
-   - `guide_size` / `denoise` / `feather` / `bbox_padding` → FaceDetailer's
-     matching parameters (right-click each widget on FaceDetailer →
+   - `model` → directly to `KSampler.model` and `FaceDetailer.model`
+     for SD1.5 / SDXL / Flux, **or** through `ModelSamplingAuraFlow` /
+     `ModelSamplingSD3` first for Z-Image Turbo / AuraFlow / SD3
+   - `positive` / `negative` → `KSampler` and/or `FaceDetailer` CONDITIONING inputs
+   - `guide_size` / `denoise` / `feather` / `bbox_padding` → matching
+     `FaceDetailer` parameters (right-click each widget on FaceDetailer →
      **Convert widget to input** to enable the connection)
 
 ---
@@ -206,24 +208,38 @@ Optional (documentation only — not consumed by the node):
 
 ```
                      ┌──────────────────────────┐
-   MODEL / CLIP ──▶──│  Face Style Preset       │
-                     │                          │
+   MODEL ──────▶─────│  Face Style Preset       │
+   CLIP  ──────▶─────│                          │
                      │  [ LoRA stack applied ]  │
                      │           ↓              │
-                     │    modified MODEL + CLIP │
+                     │   modified MODEL + CLIP  │
                      │           ↓              │
                      │  encode positive prompt  │
                      │  encode negative prompt  │
-                     │           ↓              │
-                     └──────────┬───────────────┘
-                                │
-        ┌───────────────────────┼──────────────────────┐
-        ▼                       ▼                      ▼
-      MODEL              CONDITIONING ×2         INT / FLOAT params
-        │                       │                      │
-        └─► KSampler / FaceDetailer ─► FaceDetailer    │
-                                                       │
-                                              FaceDetailer params
+                     └──┬───┬───┬────┬─────┬────┘
+                        │   │   │    │     │
+                        ▼   ▼   ▼    ▼     ▼
+                      model pos neg  guide_size / denoise
+                                     feather / bbox_padding
+
+  Typical downstream wiring:
+
+    model      ──► (optional) ModelSamplingAuraFlow / ModelSamplingSD3
+                       │
+                       ├──► KSampler (main pass)
+                       └──► FaceDetailer.model (face pass)
+
+    positive   ──► KSampler.positive   AND/OR   FaceDetailer.positive
+    negative   ──► KSampler.negative   AND/OR   FaceDetailer.negative
+
+    guide_size, denoise, feather, bbox_padding
+               ──► FaceDetailer (right-click each widget on FaceDetailer
+                                 → "Convert widget to input")
+
+  Note: for Z-Image Turbo / AuraFlow / SD3 the modified MODEL must pass
+  through the matching ModelSampling node before reaching KSampler or
+  FaceDetailer. For SD1.5 / SDXL / Flux you usually wire the model output
+  directly.
 ```
 
 ### Architecture notes
