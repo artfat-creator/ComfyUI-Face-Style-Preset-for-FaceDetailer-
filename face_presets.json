@@ -1,0 +1,133 @@
+{
+  "User_Manual": {
+    "label": "User Manual (custom)",
+    "description": "Don't auto-fill widgets. Write your own positive/negative, set your own parameters. Safe defaults for face params.",
+    "positive": "",
+    "negative": "",
+    "guide_size": 384,
+    "denoise": 0.40,
+    "feather": 20,
+    "bbox_padding": 32
+  },
+
+  "None": {
+    "label": "None (empty)",
+    "description": "Clear all widgets. Empty positive/negative, default face parameters.",
+    "positive": "",
+    "negative": "",
+    "guide_size": 384,
+    "denoise": 0.40,
+    "feather": 20,
+    "bbox_padding": 32
+  },
+
+  "A_Magazine_Cinematic": {
+    "label": "A. Magazine / Cinematic Portrait",
+    "description": "Glossy studio quality. Magazine cover, fashion, beauty editorial.",
+    "positive": "hyperdetailed face, intricate skin texture, natural skin pores, realistic eye reflections, detailed iris pattern, individual eyelashes, natural eyebrow hairs, defined cupid's bow, soft lip texture, subtle skin imperfections, professional portrait photography, magazine cover face quality, sharp focus on eyes, catchlight reflections in pupils, natural skin tone variation, defined jawline, high-resolution face details",
+    "negative": "plastic skin, smooth doll skin, AI face, deformed face, asymmetric eyes, glassy eyes, blurry eyes, bad teeth, extra teeth, lipstick smudge, makeup artifacts, uncanny valley, lifeless eyes, oversmoothed skin, airbrushed face, porcelain skin, melted features",
+    "guide_size": 512,
+    "denoise": 0.47,
+    "feather": 20,
+    "bbox_padding": 32
+  },
+
+  "B0_Smartphone_Default": {
+    "label": "B0. Smartphone / Amateur (default)",
+    "description": "Generic iPhone candid look. Instagram baseline, casual realism.",
+    "positive": "amateur iphone selfie face, natural unretouched skin texture, visible pores and freckles, slight oily T-zone, candid facial expression, soft phone bokeh on face, warm iphone color science, authentic everyday face photography, natural eyes with realistic catchlights, casual makeup or bare face, instagram story upload quality, shot on iPhone, slight sensor grain on skin, gentle shadow compression",
+    "negative": "professional studio portrait, magazine retouching, beauty dish lighting, ring light reflections, perfect symmetric face, airbrushed skin, plastic doll skin, fashion photography, DSLR shallow depth, cinematic lighting, hollywood glamour, beauty filter, instagram filter applied, oversmoothed skin, AI face, uncanny valley, fake bokeh, magazine cover",
+    "guide_size": 384,
+    "denoise": 0.38,
+    "feather": 20,
+    "bbox_padding": 48
+  },
+
+  "B1_Smartphone_YoungSelfie": {
+    "label": "B1. Smartphone / Young Casual Selfie",
+    "description": "Young casual selfie. Friend-circle snapshot quality.",
+    "positive": "amateur iphone selfie face, natural unretouched skin texture, visible pores and minor blemishes, candid facial expression, soft phone bokeh on face, warm iphone color science, authentic everyday face photography, natural makeup or no makeup, slightly tired eyes, casual everyday appearance, friend-circle snapshot quality, instagram story upload quality, shot on iPhone, slight sensor grain on skin",
+    "negative": "professional studio portrait, magazine retouching, beauty dish lighting, ring light reflections, perfect symmetric face, airbrushed skin, plastic doll skin, fashion photography, cinematic lighting, hollywood glamour, beauty filter, instagram filter applied, oversmoothed skin, AI face, uncanny valley, fake bokeh, makeup heavy",
+    "guide_size": 384,
+    "denoise": 0.38,
+    "feather": 20,
+    "bbox_padding": 48
+  },
+
+  "B2_Smartphone_IndoorCasual": {
+    "label": "B2. Smartphone / Indoor Casual",
+    "description": "Flat indoor lighting, warm tungsten color cast, room shadows.",
+    "positive": "amateur iphone face photo indoors, natural unretouched skin texture, visible pores, flat indoor lighting on face, overhead room light shadows, slight underexposure on cheek, warm tungsten color cast on skin, candid expression, soft phone bokeh, authentic everyday face photography, casual home environment lighting, slight sensor grain on skin, shot on iPhone",
+    "negative": "professional studio portrait, daylight outdoor, magazine retouching, beauty dish lighting, ring light reflections, perfect symmetric face, airbrushed skin, plastic doll skin, fashion photography, cinematic lighting, beauty filter, instagram filter applied, oversmoothed skin, AI face, fake bokeh",
+    "guide_size": 384,
+    "denoise": 0.38,
+    "feather": 20,
+    "bbox_padding": 48
+  },
+
+  "B3_Smartphone_NightOut": {
+    "label": "B3. Smartphone / Night Out / Club",
+    "description": "Party photo. Harsh flash, slight overexposure, motion blur.",
+    "positive": "amateur iphone face photo at night party, natural unretouched skin, harsh flash shadow on face, slight overexposure on forehead, party photo casualness, motion blur traces, red-eye potential, slight sweat sheen on skin, candid party expression, warm iphone color science with flash contrast, instagram story upload quality, shot on iPhone with flash, slight sensor grain",
+    "negative": "professional studio portrait, magazine retouching, beauty dish lighting, ring light reflections, perfect symmetric face, airbrushed skin, plastic doll skin, fashion photography, cinematic lighting, hollywood glamour, beauty filter, oversmoothed skin, AI face, fake bokeh, daylight, outdoor sunny",
+    "guide_size": 384,
+    "denoise": 0.40,
+    "feather": 20,
+    "bbox_padding": 48
+  },
+
+  "B4_Smartphone_OutdoorSunny": {
+    "label": "B4. Smartphone / Outdoor Sunny",
+    "description": "Harsh midday sun, deep eye-socket shadows, squinting.",
+    "positive": "amateur iphone face photo outdoors in sunlight, natural unretouched skin, harsh midday light on face, deep eye-socket shadows, sun glare on skin, squinting eyes, sweat sheen on forehead, casual outdoor candid expression, warm iphone color science with sun warmth, authentic everyday face photography, instagram story upload quality, shot on iPhone outdoors",
+    "negative": "studio lighting, indoor portrait, magazine retouching, beauty dish lighting, ring light reflections, perfect symmetric face, airbrushed skin, plastic doll skin, fashion photography, cinematic lighting, beauty filter, oversmoothed skin, AI face, fake bokeh, night scene, flash photography",
+    "guide_size": 384,
+    "denoise": 0.40,
+    "feather": 20,
+    "bbox_padding": 48
+  },
+
+  "C_Vintage_Film": {
+    "label": "C. Vintage Film / 35mm Analog",
+    "description": "Film aesthetic. Kodak Portra, Cinestill, organic grain, soft halation.",
+    "positive": "35mm film photography face, kodak portra 400 skin tones, analog film grain on skin, slight halation around highlights, faded blacks in shadows, organic film texture, subtle color shift toward warm magenta, soft natural skin with film softness, vintage portrait aesthetic, fuji pro 400h color science, gentle film bloom on cheeks, photographed on Pentax 67, hasselblad medium format quality, natural unedited face with film character",
+    "negative": "digital sharpness, modern smartphone, instagram filter, plastic skin, AI face, overprocessed, HDR, oversaturated colors, modern beauty retouching, glossy magazine, ring light, beauty dish, digital noise reduction, smooth perfection, sharp digital edges",
+    "guide_size": 448,
+    "denoise": 0.42,
+    "feather": 25,
+    "bbox_padding": 40
+  },
+
+  "D_Cinematic_Noir": {
+    "label": "D. Cinematic Noir",
+    "description": "Dramatic chiaroscuro. Hard shadows, intense gaze, film noir mood.",
+    "positive": "cinematic noir portrait face, dramatic chiaroscuro lighting on face, deep shadows on one side, sharp catchlight in eyes, hard side light from upper left, defined cheekbone shadows, intense gaze, film noir character lighting, Roger Deakins cinematography style, blade runner aesthetic, mysterious expression, detailed eye contact with camera, theatrical face lighting, high contrast face details, sculpted facial shadows",
+    "negative": "flat lighting, even illumination, soft beauty light, smartphone selfie, instagram aesthetic, casual snapshot, daylight portrait, smiling cheerful, bright happy mood, AI smooth skin, plastic perfection, ring light reflection",
+    "guide_size": 512,
+    "denoise": 0.50,
+    "feather": 18,
+    "bbox_padding": 32
+  },
+
+  "E_Fashion_Editorial": {
+    "label": "E. Fashion Editorial / Vogue",
+    "description": "High fashion editorial. Sculptural lighting, refined bone structure.",
+    "positive": "high fashion editorial face, vogue magazine cover quality, sculptural facial lighting, defined bone structure, model agency portfolio face, runway model aesthetic, sharp angular features highlighted, fashion week backstage portrait, Steven Meisel lighting style, Mario Testino editorial, professional fashion photography face, art-directed lighting on face, conceptual beauty portrait, luxury brand campaign quality, refined elegant face details",
+    "negative": "casual snapshot, amateur photography, smartphone selfie, instagram filter, candid moment, everyday face, friend photo, social media casualness, plastic AI skin, smooth doll face, generic beauty, uninspired lighting",
+    "guide_size": 512,
+    "denoise": 0.48,
+    "feather": 22,
+    "bbox_padding": 36
+  },
+
+  "F_Boudoir_Intimate": {
+    "label": "F. Boudoir / Intimate",
+    "description": "Soft warm window light. Romantic mood, intimate close portrait.",
+    "positive": "intimate boudoir face portrait, soft warm window light on face, gentle morning light caressing skin, romantic mood lighting, dreamy half-lidded eyes, slight smile, soft golden hour skin glow, parted lips with natural moisture, vulnerable intimate expression, sensual portrait photography face, peter lindbergh aesthetic, soft focus on edges sharp on eyes, candlelight warmth on cheeks, delicate eyelash detail, warm skin undertones",
+    "negative": "harsh lighting, studio strobes, ring light, flash photography, fashion editorial coldness, cinematic noir, dramatic shadows, hard contrast, midday harsh sun, plastic skin, AI smooth perfection, glamour overdone, makeup heavy, oversaturated",
+    "guide_size": 448,
+    "denoise": 0.42,
+    "feather": 25,
+    "bbox_padding": 44
+  }
+}
