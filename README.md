@@ -101,6 +101,19 @@ standard library.
 | `B2_Smartphone_IndoorCasual` | Indoor casual | 384 | 0.38 | Warm tungsten room |
 | `B3_Smartphone_NightOut` | Night out / club | 384 | 0.40 | Flash party photo |
 | `B4_Smartphone_OutdoorSunny` | Outdoor sunny | 384 | 0.40 | Harsh midday sun |
+| `B5_Smartphone_LowLight` | Low light dim | 384 | 0.40 | Candlelit / dim ambient |
+| `B6_Smartphone_iPhone15Pro_Ultrawide` | iPhone 15 Pro ultrawide | 384 | 0.38 | Wide environmental portrait |
+| `B7_Smartphone_JustWokeUp` | Just woke up | 384 | 0.38 | Sleepy morning bedroom |
+| `B8_Smartphone_PostShower` | Post shower | 384 | 0.40 | Wet hair, dewy skin, steam |
+| `B9_Smartphone_PreGoingOut` | Pre going out | 384 | 0.38 | Half-done makeup, vanity |
+| `B10_Smartphone_TiredAfterWork` | Tired after work | 384 | 0.38 | Couch slump, dim lamp |
+| `B11_Smartphone_LaughingCandid` | Laughing candid | 384 | 0.40 | Friend-caught mid-laugh |
+| `B12_Smartphone_OnlyFans_AmateurNude` | OnlyFans creator | 384 | 0.40 | Ring light, curated bedroom |
+| `B13_Smartphone_LingerieBedroom` | Lingerie bedroom | 384 | 0.40 | Sensual amateur self-shot |
+| `B14_Smartphone_MirrorNudeSelfie` | Mirror nude selfie | 384 | 0.38 | Raw amateur full body |
+| `B15_Smartphone_DiscordLeak` | Discord leak aesthetic | 384 | 0.42 | Webcam quality 720p |
+| `B16_Smartphone_TikTokRingLight` | TikTok ring light | 384 | 0.38 | Content creator vertical |
+| `B17_Smartphone_SnapchatGeofilter` | Snapchat snap | 384 | 0.38 | Ephemeral location snap |
 | `C_Vintage_Film` | Vintage film | 448 | 0.42 | 35mm analog |
 | `D_Cinematic_Noir` | Cinematic noir | 512 | 0.50 | Dramatic chiaroscuro |
 | `E_Fashion_Editorial` | Fashion editorial | 512 | 0.48 | Vogue / Harper's |
@@ -290,6 +303,23 @@ MIT — see [LICENSE](LICENSE).
   Loader inspired the dynamic LoRA UI pattern
 
 ## Changelog
+
+### 2.2.0 — Amateur photography expansion (13 new presets)
+- `B5_Smartphone_LowLight` — dim ambient amateur, ISO grain, single warm light
+- `B6_Smartphone_iPhone15Pro_Ultrawide` — 0.5x ultrawide with barrel distortion
+- `B7_Smartphone_JustWokeUp` — morning bed, sleepy bare face, pillow creases
+- `B8_Smartphone_PostShower` — wet hair, dewy skin, steam, bathroom mirror
+- `B9_Smartphone_PreGoingOut` — half-done makeup, vanity lights, anticipation
+- `B10_Smartphone_TiredAfterWork` — couch slump, dim lamp, exhausted
+- `B11_Smartphone_LaughingCandid` — friend-caught mid-laugh with motion blur
+- `B12_Smartphone_OnlyFans_AmateurNude` — content creator with ring light catchlight
+- `B13_Smartphone_LingerieBedroom` — amateur lingerie self-shot
+- `B14_Smartphone_MirrorNudeSelfie` — raw full-body nude in mirror
+- `B15_Smartphone_DiscordLeak` — webcam quality 720p leaked screenshot vibe
+- `B16_Smartphone_TikTokRingLight` — TikTok creator with subtle beauty filter
+- `B17_Smartphone_SnapchatGeofilter` — Snapchat snap aesthetic with filter
+
+Total preset count: 25 (was 12).
 
 ### 2.1.0 — Match FaceDetailer parameter names
 - Renamed output `bbox_padding` → `bbox_dilation` (matches Impact Pack's
