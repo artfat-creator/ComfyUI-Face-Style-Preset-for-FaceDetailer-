@@ -32,7 +32,7 @@ through `ModelSamplingAuraFlow` into `FaceDetailer.model`, while its
 `positive` / `negative` CONDITIONING and `guide_size` / `denoise` / `feather`
 / `bbox_dilation` / `bbox_crop_factor` numeric outputs wire straight into
 the matching FaceDetailer inputs. The LoRA stack shown uses `B4_Smartphone_OutdoorSunny`
-preset with a `Zoryana` character LoRA + a Z-Image Fun detail LoRA.
+preset with your character LoRA + a Z-Image Fun detail LoRA.
 
 ---
 
