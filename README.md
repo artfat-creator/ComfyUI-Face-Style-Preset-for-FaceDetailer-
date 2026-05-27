@@ -114,6 +114,17 @@ standard library.
 | `B15_Smartphone_DiscordLeak` | Discord leak aesthetic | 384 | 0.42 | Webcam quality 720p |
 | `B16_Smartphone_TikTokRingLight` | TikTok ring light | 384 | 0.38 | Content creator vertical |
 | `B17_Smartphone_SnapchatGeofilter` | Snapchat snap | 384 | 0.38 | Ephemeral location snap |
+| `B18_Smartphone_CarSelfie` | Car selfie | 384 | 0.38 | Driver's seat, seatbelt |
+| `B19_Smartphone_GymMirror` | Gym mirror | 384 | 0.40 | Post-workout sweat |
+| `B20_Smartphone_Restaurant` | Restaurant table | 384 | 0.40 | Candlelit dinner |
+| `B21_Smartphone_HotelRoom` | Hotel room vacation | 384 | 0.38 | Travel vibe |
+| `G1_BW_FilmGrain` | B&W film grain | 448 | 0.45 | Kodak Tri-X / HP5 |
+| `G2_BW_Digital` | B&W digital | 512 | 0.45 | Modern monochrome |
+| `H1_Y2K_Digicam` | Y2K digicam | 384 | 0.42 | 2000s flash photography |
+| `H2_Tumblr_2010s` | Tumblr 2010s | 384 | 0.42 | Pastel indie sadgirl |
+| `H3_Polaroid_Instax` | Polaroid instant | 384 | 0.42 | Instant film warm cast |
+| `H4_DisposableCamera` | Disposable camera | 384 | 0.42 | Kodak FunSaver flash |
+| `H5_WebcamLaptop` | Webcam streamer | 384 | 0.40 | Ring light cam aesthetic |
 | `C_Vintage_Film` | Vintage film | 448 | 0.42 | 35mm analog |
 | `D_Cinematic_Noir` | Cinematic noir | 512 | 0.50 | Dramatic chiaroscuro |
 | `E_Fashion_Editorial` | Fashion editorial | 512 | 0.48 | Vogue / Harper's |
@@ -303,6 +314,21 @@ MIT — see [LICENSE](LICENSE).
   Loader inspired the dynamic LoRA UI pattern
 
 ## Changelog
+
+### 2.3.0 — Style and context expansion (11 new presets)
+- `B18_Smartphone_CarSelfie` — driver's seat selfie with seatbelt
+- `B19_Smartphone_GymMirror` — post-workout gym mirror sweat sheen
+- `B20_Smartphone_Restaurant` — candlelit restaurant table date night
+- `B21_Smartphone_HotelRoom` — vacation hotel room travel mood
+- `G1_BW_FilmGrain` — classic Kodak Tri-X / Ilford HP5 monochrome
+- `G2_BW_Digital` — modern Fujifilm Acros / Leica Monochrom polish
+- `H1_Y2K_Digicam` — 2000s Sony Cybershot harsh flash + MySpace vibe
+- `H2_Tumblr_2010s` — pastel indie sadgirl Lana Del Rey aesthetic
+- `H3_Polaroid_Instax` — instant film soft focus warm color cast
+- `H4_DisposableCamera` — Kodak FunSaver harsh flash + grain
+- `H5_WebcamLaptop` — streamer / cam girl ring light webcam aesthetic
+
+Total preset count: 36 (was 25).
 
 ### 2.2.0 — Amateur photography expansion (13 new presets)
 - `B5_Smartphone_LowLight` — dim ambient amateur, ISO grain, single warm light

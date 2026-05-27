@@ -230,6 +230,127 @@
     "bbox_dilation": 48,
     "bbox_crop_factor": 2.5
   },
+  "B18_Smartphone_CarSelfie": {
+    "label": "B18. Smartphone / Car Selfie",
+    "description": "Driver's seat selfie. Seatbelt, car interior, side window light, errands or pre-event vibe.",
+    "positive": "car selfie face in driver's seat, seatbelt diagonal visible across chest, side window natural daylight on face, car interior dashboard context, freshly applied makeup or natural, casual driver expression, warm afternoon golden hour through side window, slight blue tint windshield filter on background, vertical phone framing",
+    "negative": "studio photography, magazine retouching, harsh studio strobe, beauty dish, ring light, plastic AI skin, full outdoor sun without car context, fashion editorial polish, oversmoothed",
+    "guide_size": 384,
+    "denoise": 0.38,
+    "feather": 20,
+    "bbox_dilation": 48,
+    "bbox_crop_factor": 2.5
+  },
+  "B19_Smartphone_GymMirror": {
+    "label": "B19. Smartphone / Gym Mirror",
+    "description": "Post-workout gym mirror selfie. Sweat sheen, flushed face, athletic wear, fluorescent gym lighting.",
+    "positive": "post-workout face in gym mirror, flushed cheeks from exertion, sweat sheen on forehead and temples, hair pulled back in ponytail with damp strands escaping, harsh overhead fluorescent gym lighting, cool blue-white LED gym ambient, no makeup or sweat-smudged remnants, mouth slightly parted recovering breath, satisfied confident gym expression",
+    "negative": "fresh full makeup, studio lighting, beauty editorial polish, plastic AI skin, magazine cover, dry untouched skin, perfect hair styled, fashion polish, calm composed",
+    "guide_size": 384,
+    "denoise": 0.4,
+    "feather": 20,
+    "bbox_dilation": 48,
+    "bbox_crop_factor": 2.5
+  },
+  "B20_Smartphone_Restaurant": {
+    "label": "B20. Smartphone / Restaurant Table",
+    "description": "Candlelit restaurant selfie. Warm tungsten ambient, candle flicker on face, date night mood.",
+    "positive": "candlelit restaurant face, warm tungsten ambient glow on cheeks, candle flicker dancing across face, glossy lip with full glam makeup, smoky eye, date night romantic anticipation expression, slight smile, hair styled in soft waves, warm Edison bulb pendant overhead light, dim mood restaurant ambient",
+    "negative": "harsh daylight, studio strobe, beauty dish, ring light, fluorescent overhead, plastic AI skin, bright clinical lighting, magazine cover polish, no makeup natural face",
+    "guide_size": 384,
+    "denoise": 0.4,
+    "feather": 22,
+    "bbox_dilation": 44,
+    "bbox_crop_factor": 2.8
+  },
+  "B21_Smartphone_HotelRoom": {
+    "label": "B21. Smartphone / Hotel Room Vacation",
+    "description": "Hotel room selfie during travel. Generic hotel aesthetic, neutral lighting, vacation mood.",
+    "positive": "hotel room face during vacation, neutral hotel room ambient lighting, mixed natural window light from city or beach view, warm bedside lamp tungsten fill, travel vacation excited mood, casual makeup or natural sun-kissed face, slight golden hour rim from window, generic hotel aesthetic context",
+    "negative": "studio strobe lighting, harsh shadows, magazine editorial, plastic AI skin, beauty dish, ring light catchlight, professional fashion polish, overdone glamour",
+    "guide_size": 384,
+    "denoise": 0.38,
+    "feather": 20,
+    "bbox_dilation": 48,
+    "bbox_crop_factor": 2.5
+  },
+  "G1_BW_FilmGrain": {
+    "label": "G1. Black and White / Film Grain",
+    "description": "Classic monochrome film. Tri-X / HP5 grain, deep blacks, bright highlights. Cartier-Bresson / Salgado.",
+    "positive": "black and white film photography face, high contrast monochrome, deep rich blacks and bright highlights, organic Kodak Tri-X 400 film grain texture on skin, classic 35mm film aesthetic, Henri Cartier-Bresson documentary portrait face, timeless contemplative expression, scanned negative quality, darkroom print aesthetic, chiaroscuro tonal range on facial features",
+    "negative": "color photography, digital sharpness, instagram filter, oversmoothed, AI plastic skin, modern beauty retouching, fashion editorial polish, harsh studio strobe, magazine cover glossy",
+    "guide_size": 448,
+    "denoise": 0.45,
+    "feather": 22,
+    "bbox_dilation": 40,
+    "bbox_crop_factor": 3.0
+  },
+  "G2_BW_Digital": {
+    "label": "G2. Black and White / Digital",
+    "description": "Modern clean digital monochrome. Fujifilm Acros simulation, Leica Monochrom polished aesthetic.",
+    "positive": "modern digital black and white face, clean smooth monochrome tonal range, sharp digital detail across skin, Fujifilm Acros simulation, Peter Lindbergh contemporary B&W portrait aesthetic, refined editorial polish, contemplative direct gaze, Mark Seliger modern editorial monochrome, high resolution digital capture",
+    "negative": "film grain texture, vintage warm cast, color cast, oversaturated colors, AI plastic skin over-smoothed, low resolution, harsh JPEG compression, instagram filter, professional fashion editorial color",
+    "guide_size": 512,
+    "denoise": 0.45,
+    "feather": 20,
+    "bbox_dilation": 36,
+    "bbox_crop_factor": 3.0
+  },
+  "H1_Y2K_Digicam": {
+    "label": "H1. Y2K Digicam (2000s)",
+    "description": "2000s era digital camera. Harsh built-in flash, red-eye, oversaturated, low resolution, date stamp.",
+    "positive": "Y2K 2000s digicam face, harsh built-in flash overexposure blowing out forehead and nose highlights, red-eye in pupils, 2000s teen aesthetic face, glittery lip gloss, MySpace pose energy, side-swept 2000s layered hair with side bangs, oversaturated colors with magenta cast, slight JPEG compression, low resolution 3-5 megapixel CCD sensor quality, butterfly clips accent",
+    "negative": "modern smartphone quality, beauty filter, professional retouching, high resolution sharp digital, magazine editorial polish, AI plastic over-smoothed skin, contemporary aesthetic, expensive professional camera",
+    "guide_size": 384,
+    "denoise": 0.42,
+    "feather": 20,
+    "bbox_dilation": 48,
+    "bbox_crop_factor": 2.5
+  },
+  "H2_Tumblr_2010s": {
+    "label": "H2. Tumblr 2010s",
+    "description": "2010-2015 Tumblr aesthetic. Pastel filter, melancholic indie sadgirl, Lana Del Rey vibe.",
+    "positive": "Tumblr 2010s pastel soft filter face, melancholic indie sadgirl mood expression, smudged dark eye makeup, dark worn-off lipstick, distant contemplative gaze looking off-frame, slight blue-purple color cast on skin, faded blacks, vignette darkening at corners, Lana Del Rey inspired wistful expression, soft hazy filtered light, Effy Stonem aesthetic",
+    "negative": "bright happy energy, professional studio retouching, modern crisp digital sharpness, fashion editorial polish, AI plastic skin, full bright smile, contemporary instagram filter, beauty influencer polish",
+    "guide_size": 384,
+    "denoise": 0.42,
+    "feather": 22,
+    "bbox_dilation": 44,
+    "bbox_crop_factor": 2.5
+  },
+  "H3_Polaroid_Instax": {
+    "label": "H3. Polaroid / Instax",
+    "description": "Instant film aesthetic. White border, soft focus, warm Polaroid color cast, vignette.",
+    "positive": "instant Polaroid film soft focus on face, warm yellow-orange Polaroid 600 color cast on skin, slight vignette darkening at corners, casual candid snapshot expression, nostalgic vintage warm feel, soft focus from cheap plastic SX-70 lens, faded saturation typical instant film, natural unposed face, thick white instant film border visible at frame edge",
+    "negative": "digital sharpness, professional retouching, fashion editorial, AI plastic skin, modern color science, instagram filter, high resolution clarity, magazine cover polish, harsh studio strobe",
+    "guide_size": 384,
+    "denoise": 0.42,
+    "feather": 25,
+    "bbox_dilation": 44,
+    "bbox_crop_factor": 2.5
+  },
+  "H4_DisposableCamera": {
+    "label": "H4. Disposable Camera",
+    "description": "Kodak FunSaver / Fujifilm Quicksnap. Harsh built-in flash, red-eye, grain, light leaks.",
+    "positive": "disposable Kodak FunSaver camera harsh built-in flash overexposure on face, severe red-eye in pupils from cheap flash, blown-out highlights on cheeks and forehead, ISO 400 organic film grain texture across skin, candid mid-laugh expression, deep dark shadow behind face from flash, warm flash + ambient color cast, slight motion blur, wedding favor or party throwaway camera vibe",
+    "negative": "studio professional lighting, retouched skin, no flash available light, AI plastic smoothed skin, modern digital crispness, magazine editorial, beauty dish, high resolution sharp",
+    "guide_size": 384,
+    "denoise": 0.42,
+    "feather": 22,
+    "bbox_dilation": 48,
+    "bbox_crop_factor": 2.5
+  },
+  "H5_WebcamLaptop": {
+    "label": "H5. Webcam Laptop (Streamer)",
+    "description": "Streamer / cam girl webcam aesthetic. Ring light catchlight, direct camera gaze, RGB neon ambient.",
+    "positive": "webcam streamer face with perfect circular ring light catchlight visible as two ovals in eyes, direct seductive engaged gaze through 1080p Logitech C920 webcam, 16:9 horizontal broadcast format, RGB LED neon pink and purple accent reflections in highlights, subtle beauty filter polish, full glam makeup with glossy lip, slight wide-angle webcam distortion, streamer studio setup ambient",
+    "negative": "natural amateur no makeup look, candid unposed snapshot, harsh studio strobe single source, magazine editorial polish, low resolution webcam grain, dim ambient without ring light, fashion editorial",
+    "guide_size": 384,
+    "denoise": 0.4,
+    "feather": 18,
+    "bbox_dilation": 40,
+    "bbox_crop_factor": 2.5
+  },
   "C_Vintage_Film": {
     "label": "C. Vintage Film / 35mm Analog",
     "description": "Film aesthetic. Kodak Portra, Cinestill, organic grain, soft halation.",
