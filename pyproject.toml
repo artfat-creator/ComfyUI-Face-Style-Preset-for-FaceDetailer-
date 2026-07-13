@@ -14,8 +14,8 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/artfat-creator/comfyui-face-preset"
-Issues = "https://github.com/artfat-creator/comfyui-face-preset/issues"
+Repository = "https://github.com/artfat-creator/ComfyUI-Face-Style-Preset-for-FaceDetailer-"
+Issues = "https://github.com/artfat-creator/ComfyUI-Face-Style-Preset-for-FaceDetailer-/issues"
 
 [tool.comfy]
 PublisherId = "artfat-creator"

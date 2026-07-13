@@ -46,11 +46,11 @@ Search "Face Style Preset" in ComfyUI Manager → Install.
 
 ```bash
 cd <ComfyUI>/custom_nodes
-git clone https://github.com/defrelender/comfyui-face-preset.git
+git clone https://github.com/artfat-creator/ComfyUI-Face-Style-Preset-for-FaceDetailer-.git
 ```
 
 Or download the ZIP and extract it to
-`<ComfyUI>/custom_nodes/comfyui-face-preset/`.
+`<ComfyUI>/custom_nodes/ComfyUI-Face-Style-Preset-for-FaceDetailer-/`.
 
 Restart ComfyUI. The node appears under the **Face Tools** category.
 
@@ -279,7 +279,7 @@ Optional (documentation only — not consumed by the node):
 ## Troubleshooting
 
 **Node doesn't appear after install / update.** Delete the
-`__pycache__` folder inside `comfyui-face-preset/` and restart ComfyUI.
+`__pycache__` folder inside `ComfyUI-Face-Style-Preset-for-FaceDetailer-/` and restart ComfyUI.
 Python bytecode caches can stick around when files are replaced.
 
 **JS UI not loading (no LoRA stack widget).** Hard-refresh the browser
