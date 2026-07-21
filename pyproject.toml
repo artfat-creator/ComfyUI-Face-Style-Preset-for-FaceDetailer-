@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-face-preset"
 description = "All-in-one face styling node for ComfyUI: curated style presets with auto-fill prompts, FaceDetailer parameters, and a dynamic searchable LoRA stack. Outputs CONDITIONING + modified MODEL ready for FaceDetailer / KSampler."
-version = "2.3.0"
+version = "2.3.1"
 license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.10"
@@ -19,5 +19,5 @@ Issues = "https://github.com/artfat-creator/ComfyUI-Face-Style-Preset-for-FaceDe
 
 [tool.comfy]
 PublisherId = "artfat-creator"
-DisplayName = "Face Style Preset (for FaceDetailer)"
+DisplayName = "Artfat Face Style Preset"
 Icon = ""
